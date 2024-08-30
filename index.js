@@ -36,9 +36,12 @@ for (var i = 0 ; i < arr.length ; i++) {
 }
 
 document.addEventListener("keydown",function(event) {
-    var buttonkeyboard = event.key.toLowerCase();
-    console.log(event.key);
-    switch (buttonkeyboard) {
+    handlekey(event.key);
+})
+
+function handlekey(key) {
+    console.log(key);
+    switch (key) {
         case 'w':
             var sound = new Audio("sounds/tom-1.mp3");
             sound.play();
@@ -68,4 +71,4 @@ document.addEventListener("keydown",function(event) {
             sound.play();
         break;
     }
-})
+}
